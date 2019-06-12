@@ -1,0 +1,92 @@
+Options +FollowSymLinks
+
+Options -MultiViews
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^http://foodnation.epizy.com/?i=1$ 
+RewriteRule ^(.*)$ http://foodnation.epizy.com [R=301,L]
+
+
+RewriteRule ^productos/([a-zA-Z]+)$ listProducto.php?tipo=$1 [L]
+
+RewriteRule ^producto/([0-9]+)$ detalles.php?id=$1
+
+RewriteRule ^producto/([0-9]+)/error$ detalles.php?id=$1&error
+
+##############################################################
+
+RewriteRule ^iniciar-sesion$ inicioSesion.php [L]
+
+RewriteRule ^iniciar-sesion/error$ inicioSesion.php?error [L]
+
+#############################################################
+
+RewriteRule ^registro$ registro.php [L]
+
+RewriteRule ^registro/error$ registro.php?error [L,QSA,NC]
+
+RewriteRule ^registro/sucess$ registro.php?fin [L,QSA,NC]
+
+############################################################
+
+RewriteRule ^panel-usuario$ panelUsuario.php [L,QSA,NC]
+
+RewriteRule ^panel-usuario/(.*)$ panelUsuario.php?accion=$1 [L,QSA,NC]
+
+############################################################
+
+RewriteRule ^cerrar-sesion$ forms-action/formLogin.php
+
+##########################################################
+
+RewriteRule ^checkout$ checkOut.php
+
+RewriteRule ^checkout/success$ checkOut.php?fin
+
+##########################################################
+
+RewriteRule ^cesta-de-compra$ verCarrito.php [L,QSA,NC]
+
+##########################################################
+
+RewriteRule ^accion-carrito$ carrito.php
+
+RewriteRule ^accion-carrito/([a-zA-Z]+)$ carrito.php?accion=$1
+
+RewriteRule ^accion-carrito/([0-9]+)/([a-zA-Z]+)$ carrito.php?id=$1&accion=$2
+
+
+##########################################################
+
+######################ADMINISTRACION######################
+
+##########################################################
+
+RewriteRule ^admin/inicio$ admin/index.php [END,QSA]
+
+##########################################################
+
+RewriteRule ^admin/usuarios$ admin/usuarios.php [END,QSA]
+
+RewriteRule ^admin/usuarios/listado$ admin/usuarios.php?listar [END,QSA]
+
+RewriteRule ^admin/usuarios/editar/([0-9]+)$ admin/usuarios.php?editar&id=$1 [END,QSA]
+
+##########################################################
+
+RewriteRule ^admin/productos$ admin/productos.php [END,QSA]
+
+RewriteRule ^admin/productos/listado$ admin/productos.php?listar [END,QSA]
+
+RewriteRule ^admin/productos/nuevo-producto$ admin/productos.php?nuevo [END,QSA]
+
+RewriteRule ^admin/productos/editar/([0-9]+)$ admin/productos.php?editar&id=$1 [END,QSA]
+
+##########################################################
+
+RewriteRule ^admin/comentarios$ admin/comentarios.php [L]
+
+RewriteRule ^admin/comentarios/editar/([0-9]+)$ admin/comentarios.php?editar&id=$1 [END,QSA]
+
+##########################################################

@@ -1,0 +1,579 @@
+.dialogo {
+
+    display: none;
+
+}
+
+#imagen-usuario{
+
+    max-width: 131px;
+
+    box-shadow: 0 0 0px 2px #30323a;
+
+    border-radius: 200px 200px 200px 200px;
+
+    max-height: 126px;
+
+    cursor: pointer;
+
+}
+
+.campoUsuario{
+
+    font-size: 25px;
+
+}
+
+.bloque {
+
+    margin-top: 2%;
+
+    padding: 1%;
+
+    background-color: #30323ab8;
+
+    color: white;
+
+    border-radius: 33px 33px 33px 33px;
+
+
+
+}
+
+.bloque input {
+
+    color: black;
+
+    text-align: center;
+
+}
+
+.tarjetaCredito {
+
+    font-size: 57px  !important;
+
+
+
+}
+
+.bloqueSinPadding {
+
+    margin-bottom: 0% !important;
+
+}
+
+.separador{
+
+    background-color: #6C6D72;
+
+    height:  0.5rem;
+
+    margin-bottom: 1%;
+
+}
+
+.paddingBottom3 {
+
+    margin-bottom: -3% !important;
+
+}
+
+.botonAñadirNuevo {
+
+    padding: 3% !important;
+
+}
+
+.tabla-pagos   button{
+
+    background-color: slategrey;
+
+}
+
+.imagenUsuario{
+
+    display: none !important;
+
+}
+
+#footer{
+
+    position: absolute;
+
+    width: 100%;
+
+    padding: 24px;
+
+}
+
+.imagenPerfil {
+
+    max-height: 22px;
+    max-width: 36px;
+
+}
+
+
+
+.section {
+
+    min-height: 582px;
+
+}
+
+#imagenPerfil{
+
+    height: auto !important;
+
+}
+
+#tablaComentarios img {
+
+    width: 30%;
+
+}
+
+#tablaComentarios{
+
+    width: auto !important;
+
+}
+
+.columTarjetas button, .columDirecciones button {
+
+    position: absolute;
+
+
+
+    width: 33px;
+
+
+
+    font-size: 10px;
+
+
+
+    height: 24px;
+
+
+
+    background: none;
+
+}
+
+#enviarFormEditarUsuario {
+
+    text-align: center;
+
+    color: white;
+
+    display: none;
+
+}
+
+.spanClick {
+
+    cursor: pointer;
+
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////         ADMINISTRACIÓN   /////////////////////////////*/
+
+.adminInputFormMaxHeight {
+
+    height: 100% !important;
+
+}
+
+.adminImgListadoProductos {
+
+    max-width: 14%;
+
+}
+
+.adminBotonEliminarListado{
+
+    cursor: pointer;
+
+}
+
+.adminAccionesListado a{
+
+    padding: 5%;
+
+}
+
+.adminImgEditarProducto {
+
+    display: block;
+
+    max-height: 12rem;
+
+    padding: 6px 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+}
+
+.adminImgUsuariosListado{
+
+    max-width: 22%;
+
+}
+
+#formAdminEditarUsuario input {
+
+    line-height: normal;
+
+}
+
+.adminImgListadoProductosComentarios {
+
+    max-width: 50%;
+
+}
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 991px){
+
+    #columnaOpciones ul {
+
+        display: inline-grid;
+
+        min-width: 170px;
+
+    }
+
+    .opcion {
+
+        display: content;
+
+    }
+
+    #columnaOpciones li {
+
+        margin-top: 12px;
+
+    }
+
+    .productoReceta img{
+
+        max-height: 14rem !important;
+
+    }
+
+
+
+}
+
+@media (min-width: 200px) and (max-width: 990px){
+
+    #columnaOpciones ul {
+
+        display: inline-flex;
+
+        width: 100%;
+
+        height: 6rem;
+
+    }
+
+    #columnaOpciones li {
+
+        margin-left: -0.6rem !important;
+
+        max-width: 187px;
+
+        width: 114%;
+
+        height: 40px;
+
+        margin-top: 0;
+
+    }
+
+
+
+    .opcion {
+
+        display: none;
+
+    }
+
+    table {
+
+        font-size: 10px;
+
+    }
+
+    .columDirecciones{
+
+        text-align: center;
+
+    }
+
+    #listado fa{
+
+        position: relative;
+
+        left: 2.6rem;
+
+    }
+
+    .product-single {
+
+        min-height: 30rem;
+
+    }
+
+    .menuUsuario {
+
+        left: 50% !important;
+
+    }
+
+    .custom-menu {
+
+        left: 100%;
+
+    }
+
+    .productoReceta img{
+
+        max-height: 15rem;
+
+        min-width: 13rem;
+
+    }
+
+}
+
+@media (min-width: 200px) and (max-width: 558px){
+
+    .productoReceta i{
+
+        position: relative;
+
+        left: 41%;
+
+    }
+
+}
+
+@media (min-width: 300px){
+
+    .columTarjetas button, .columDirecciones button {
+
+        position: initial;
+
+    }
+
+}
+
+/*@media (min-width: 378px) and (max-width: 520px){
+
+    .custom-menu {
+
+        left: -13% !important;
+
+    }
+
+}*/
+
+/*///////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px){
+
+    .productoReceta{
+
+        max-height: 26rem !important;
+
+    }
+
+    /*    .productoReceta img{
+
+            max-height: 17rem !important;
+
+        }*/
+
+}
+
+@media (min-width: 992px){
+
+    .productoReceta{
+
+        max-height: 35rem;
+
+    }
+
+    /*    .productoReceta img{
+
+            max-height: 15rem;
+
+        }*/
+
+}
+
+@media (max-width: 992px){
+
+
+
+    columnaOpciones ul {
+
+        display: inline-flex;
+
+    }
+
+    /*    #columnaOpciones li {
+
+            margin-left: 1rem !important;
+
+            max-width: 187px;
+
+            width: 114%;
+
+            display: block;
+
+            height: 40px;
+
+        }*/
+
+    /*    #columnaOpciones span {
+
+            position: relative;
+
+            bottom: 0rem;
+
+        }*/
+
+    .tarjetaCredito{
+
+        position: relative;
+
+        top: 3px;
+
+    }
+
+    .closeDireccion {
+
+        position: relative;
+
+        left: 71%;
+
+    }
+
+
+
+    .col-sm-offset-2{
+
+        margin-left: 12% !important;
+
+    }
+
+
+
+
+
+}
+
+
+
+@media (max-width: 812px){
+
+    /*    #columnaOpciones ul {
+
+            display: inline-flex;
+
+        }*/
+
+    /*    #columnaOpciones li {
+
+            margin-left: 1rem !important;
+
+            max-width: 187px;
+
+            width: 114%;
+
+            display: block;
+
+            height: 40px;
+
+        }
+
+        #columnaOpciones span {
+
+            position: relative;
+
+            bottom: 0rem;
+
+        }*/
+
+}
+
+@media (max-width: 425px){
+
+    #formLogin div {
+
+        text-align: center !important;
+
+    }
+
+    .columTarjetas .tarjetaCredito {
+
+        position: relative;
+
+        top: 34px;
+
+        font-size: 30px !important;
+
+    }
+
+}
+
+@media (min-width: 200px) and (max-width: 400px){
+
+
+
+
+
+    .tbody-elementos img {
+
+        width: 59% !important;
+
+    }
+
+}
+
