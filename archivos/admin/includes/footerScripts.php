@@ -1,18 +1,18 @@
-<script src="../js/jquery.min.js"></script>
+<script src="./js/jquery.min.js"></script>
 
-<script src="../js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 
-<script src="../js/slick.min.js"></script>
+<script src="./js/slick.min.js"></script>
 
-<script src="../js/nouislider.min.js"></script>
+<script src="./js/nouislider.min.js"></script>
 
-<script src="../js/jquery.zoom.min.js"></script>
+<script src="./js/jquery.zoom.min.js"></script>
 
-<script src="../js/main.js"></script>
+<script src="./js/main.js"></script>
 
-<script src = "../js/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
+<script src = "./js/jquery-ui-1.10.4/js/jquery-1.10.2.js"></script>
 
-<script src = "../js/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.js"></script>
+<script src = "./js/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.js"></script>
 
 <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 

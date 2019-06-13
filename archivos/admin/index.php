@@ -68,7 +68,7 @@ if (isset($_SESSION['usuario'])) {
 
                                             <a href="admin/usuarios"><button class="main-btn quick-view"><i class="fa fa-pencil"></i> Usuarios</button></a>
 
-                                            <img src="../../img/bannerUsuario.jpg" alt="">
+                                            <img src="./img/bannerUsuario.jpg" alt="">
 
                                         </div>
 
@@ -84,7 +84,7 @@ if (isset($_SESSION['usuario'])) {
 
                                             <a href="admin/productos"><button class="main-btn quick-view"><i class="fa fa-pencil"></i> productos</button></a>
 
-                                            <img src="../../img/bannerCarrito.jpg" alt="">
+                                            <img src="./img/bannerCarrito.jpg" alt="">
 
                                         </div>
 
@@ -98,7 +98,7 @@ if (isset($_SESSION['usuario'])) {
 
                                             <a href="admin/comentarios"><button class="main-btn quick-view"><i class="fa fa-pencil"></i> comentarios</button></a>
 
-                                            <img src="../../img/bannerComment.jpg" alt="">
+                                            <img src="./img/bannerComment.jpg" alt="">
 
                                         </div>
 

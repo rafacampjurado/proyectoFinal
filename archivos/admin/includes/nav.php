@@ -82,11 +82,11 @@
 
 
 
-                    <li class="header-btns dropdown default-dropdown"><a  href="admin/usuarios" >Usuarios</a></li>
+                    <li class="header-btns dropdown default-dropdown"><a  href="./admin/usuarios" >Usuarios</a></li>
 
 
 
-                    <li class="header-btns dropdown default-dropdown"><a  href="admin/comentarios" >Comentarios</a></li>
+                    <li class="header-btns dropdown default-dropdown"><a  href="./admin/comentarios" >Comentarios</a></li>
                 </ul>
 
 

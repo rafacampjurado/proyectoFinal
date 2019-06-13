@@ -138,7 +138,7 @@ if (!isset($_SESSION['usuario'])) { //LOGIN O LOGOUT
 
 
 
-    header("Location: ../");
+    header("Location: /");
 
 
 

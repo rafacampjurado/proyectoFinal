@@ -310,7 +310,7 @@ class ProductoView {
 
 
 
-                                <th scope="col"><img class="adminImgListadoProductos" src="../$imagen"></th>
+                                <th scope="col"><img class="adminImgListadoProductos" src="./$imagen"></th>
 
 
 
@@ -338,7 +338,7 @@ class ProductoView {
 
 
 
-                                    <a href="../producto/$idProducto"><span class="fa fa-eye"></span></a>
+                                    <a href="./producto/$idProducto"><span class="fa fa-eye"></span></a>
 
 
 
@@ -547,7 +547,7 @@ EX;
 
 
 
-                    <input type="text" hidden="" name="imagenActualProducto" value="../<?php echo $producto->getImg(); ?>">
+                    <input type="text" hidden="" name="imagenActualProducto" value="<?php echo $producto->getImg(); ?>">
 
 
 
@@ -563,7 +563,7 @@ EX;
 
 
 
-                    <img src="../<?php echo $producto->getImg(); ?>" class="adminImgEditarProducto">
+                    <img src="<?php echo $producto->getImg(); ?>" class="adminImgEditarProducto">
 
 
 

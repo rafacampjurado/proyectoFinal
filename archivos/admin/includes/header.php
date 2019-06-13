@@ -110,7 +110,7 @@
 
 
 
-                    <a href="../"><img class="img-responsive" src="../img/logo.png" alt=""></a>
+                    <a href="./"><img class="img-responsive" src="./img/logo.png" alt=""></a>
 
 
 
@@ -194,7 +194,7 @@
 
 
 
-                                    echo '<img src="../img/user-images/' . $_SESSION['usuario']->getIdUsuario() . '-' . $_SESSION['usuario']->getImagen() . '" class="imagenPerfil">';
+                                    echo '<img src="./img/user-images/' . $_SESSION['usuario']->getIdUsuario() . '-' . $_SESSION['usuario']->getImagen() . '" class="imagenPerfil">';
 
 
 
@@ -262,15 +262,15 @@
 
 
 
-                                    <li><a href="/admin">Inicio</a></li>
+                                    <li><a href="/">Inicio</a></li>
 
 
 
-                                    <li><a href="../panel-usuario">Mi cuenta</a></li>
+                                    <li><a href="./panel-usuario">Mi cuenta</a></li>
 
 
 
-                                    <li><a href="../cerrar-sesion">Cerrar Sesión</a></li>  
+                                    <li><a href="./cerrar-sesion">Cerrar Sesión</a></li>  
 
 
 

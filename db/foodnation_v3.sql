@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: sql307.epizy.com
--- Tiempo de generación: 12-06-2019 a las 04:49:08
+-- Tiempo de generación: 13-06-2019 a las 03:21:46
 -- Versión del servidor: 5.6.41-84.1
 -- Versión de PHP: 5.3.3
 
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `direcciones_usuario` (
   `pais` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idDireccion`),
   KEY `idUsuario` (`idUsuario`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `direcciones_usuario`
@@ -47,7 +47,8 @@ INSERT INTO `direcciones_usuario` (`idDireccion`, `idUsuario`, `alias`, `calle`,
 (3, 1, 'casa', 'ejemplo', 11111, 2147483647, 'ejemplo', 'ejemplo'),
 (4, 7, 'casa', 'invierno', 1, 2147483647, 'invernalia', 'poniente'),
 (8, 17, 'casita', 'charco n12', 19482, 2147483647, 'MÃ¡laga', 'EspaÃ±a'),
-(6, 11, 'Norte', 'Calle helada 13', 10101, 2147483647, 'Invernalia', 'Poniente');
+(6, 11, 'Norte', 'Calle helada 13', 10101, 2147483647, 'Invernalia', 'Poniente'),
+(9, 18, 'ejemplo de calle', 'calle ejemplo', 19483, 2147483647, 'malaga', 'espaÃ±a');
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `facturas` (
   KEY `FK_idUsuario` (`idUsuario`),
   KEY `idDireccion` (`idDireccion`),
   KEY `facturas_ibfk_1` (`idTarjetaCredito`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
 
 --
 -- Volcado de datos para la tabla `facturas`
@@ -83,7 +84,13 @@ INSERT INTO `facturas` (`idFactura`, `idUsuario`, `idTarjetaCredito`, `idDirecci
 (22, 1, 1, 3, '2019-06-07'),
 (23, 11, 5, 6, '2019-06-09'),
 (24, 1, 1, 3, '2019-06-11'),
-(25, 17, 8, 8, '2019-06-11');
+(25, 17, 8, 8, '2019-06-11'),
+(26, 1, 1, 3, '2019-06-12'),
+(27, 18, 9, 9, '2019-06-12'),
+(28, 18, NULL, NULL, '2019-06-12'),
+(29, 18, NULL, NULL, '2019-06-12'),
+(30, 18, NULL, NULL, '2019-06-12'),
+(31, 18, 9, 9, '2019-06-12');
 
 -- --------------------------------------------------------
 
@@ -119,7 +126,10 @@ INSERT INTO `facturas_productos` (`idFactura`, `idProducto`, `cantidad`) VALUES
 (24, 25, 1),
 (24, 98, 1),
 (25, 93, 3),
-(25, 60, 5);
+(25, 60, 5),
+(26, 98, 1),
+(27, 1, 6),
+(31, 12, 1);
 
 -- --------------------------------------------------------
 
@@ -138,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `opiniones` (
   PRIMARY KEY (`idOpinion`),
   KEY `fk_idusuarios` (`idUsuario`),
   KEY `fk_idproductos` (`idProducto`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
 
 --
 -- Volcado de datos para la tabla `opiniones`
@@ -156,8 +166,10 @@ INSERT INTO `opiniones` (`idOpinion`, `idUsuario`, `idProducto`, `Opinion`, `Fec
 (11, 1, 47, 'Queso', '2019-06-07', 5, 1),
 (12, 1, 71, 'Tomaticos con tomate', '2019-06-08', 4, 1),
 (13, 11, 31, 'No venÃ­a frÃ­o.', '2019-06-09', 4, 1),
+(21, 1, 18, 'test', '2019-06-12', 1, 0),
 (19, 17, 60, 'Para el bocadillo de la tarde.', '2019-06-11', 4, 1),
-(20, 17, 1, 'Quinto comentario en este producto (1)', '2019-06-11', 5, 1);
+(20, 17, 1, 'Quinto comentario en este producto (1)', '2019-06-11', 5, 1),
+(22, 18, 1, 'Muy buena patata', '2019-06-12', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -282,7 +294,7 @@ INSERT INTO `productos` (`idProducto`, `Nombre`, `Precio`, `Tipo`, `Img`) VALUES
 (102, 'Mahi Mahi', 82.33, 'Dulce', 'img/productDulce.jpg'),
 (103, 'Oil - Safflower', 82.32, 'Carne', 'img/productCarne.jpg'),
 (104, 'Vinegar - Tarragon', 95.72, 'Carne', 'img/productCarne.jpg'),
-(108, 'ejemploProducto', 65.10, 'Fruta', '../img/../../img/../../img/hoja.png');
+(108, 'ejemploProducto', 47.10, 'Hortaliza', 'img/HenryHTB1840.jpg');
 
 -- --------------------------------------------------------
 
@@ -298,7 +310,7 @@ CREATE TABLE IF NOT EXISTS `tarjetasdecredito` (
   PRIMARY KEY (`idTarjetaCredito`),
   UNIQUE KEY `numeroTarjeta` (`numeroTarjeta`),
   KEY `idUsuario` (`idUsuario`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Volcado de datos para la tabla `tarjetasdecredito`
@@ -309,7 +321,8 @@ INSERT INTO `tarjetasdecredito` (`idTarjetaCredito`, `numeroTarjeta`, `tipo`, `i
 (2, 'A1A2A3A4A5A', 'MASTETRCARD', 1),
 (3, '14872438385', 'MASTERCARD', 7),
 (5, '10MAD0B94IA', 'MASTERCARD', 11),
-(8, '11111111112', 'UNICAJA', 17);
+(8, '11111111112', 'UNICAJA', 17),
+(9, 'MA95MA8CIA0', 'VISA', 18);
 
 -- --------------------------------------------------------
 
@@ -330,7 +343,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `usuario` (`usuario`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -342,7 +355,8 @@ INSERT INTO `usuarios` (`idUsuario`, `nombre`, `apellidos`, `email`, `fecha`, `i
 (5, 'testta', 'testt', 'testing@testing.es', '2019-02-08', 'default.png', 'usuario', 'testing', 'ae2b1fca515949e5d54fb22b8ed95575'),
 (7, 'Arya', 'Stark', 'arya@stark.com', '2019-05-20', 'default.png', 'usuario', 'Arya', '2fbb71b04b02738300427866d6e3181a'),
 (11, 'John', 'Nieve', 'john@nieve.com', '2019-06-09', 'user.jpg', 'usuario', 'John', '8db8c4b64d661710ce1fa380a71aef89'),
-(15, 'htacess', 'htacess', 'pruebaht@ht.com', '2019-06-10', 'default.png', 'usuario', 'htacess', '0cc175b9c0f1b6a831c399e269772661'),
+(18, 'Test', 'testeador2', 'test2@test2.com', '2019-06-12', 'manta.JPG', 'usuario', 'test2', '098f6bcd4621d373cade4e832627b4f6'),
+(15, 'Mrhtaccess', 'htacess', 'pruebaht@ht.com', '2019-06-11', 'PSP370.jpg', 'usuario', 'htaccess', 'dc1f12c99f7fef3c56e4c512e51cee47'),
 (17, 'Test', 'numero', 'test11@test.com', '2019-06-11', 'thinking.jpg', 'usuario', 'test', '098f6bcd4621d373cade4e832627b4f6');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

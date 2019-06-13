@@ -146,7 +146,7 @@ class UsuarioView {
 
 
 
-                        $rutaImagen = ($imagen == 'default.png') ? '../img/user-images/' . $imagen : '../img/user-images/' . $idUsuario . '-' . $imagen;
+                        $rutaImagen = ($imagen == 'default.png') ? './img/user-images/' . $imagen : './img/user-images/' . $idUsuario . '-' . $imagen;
 
 
 
@@ -290,7 +290,7 @@ EX;
 
 
 
-        $imagen = ($usuario->getImagen() == 'default.png') ? '../../img/user-images/' . $usuario->getImagen() : '../../img/user-images/' . $usuario->getIdUsuario() . '-' . $usuario->getImagen();
+        $imagen = ($usuario->getImagen() == 'default.png') ? './img/user-images/' . $usuario->getImagen() : './img/user-images/' . $usuario->getIdUsuario() . '-' . $usuario->getImagen();
 
 
 

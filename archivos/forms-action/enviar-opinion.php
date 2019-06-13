@@ -39,6 +39,6 @@ if (isset($_SESSION['usuario'])) {
 
 } else {
 
-    header('Location: ../');
+    header('Location: /');
 
 }

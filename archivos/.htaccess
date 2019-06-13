@@ -5,7 +5,8 @@ Options -MultiViews
 RewriteEngine on
 
 RewriteCond %{HTTP_HOST} ^http://foodnation.epizy.com/?i=1$ 
-RewriteRule ^(.*)$ http://foodnation.epizy.com [R=301,L]
+RewriteRule ^(.*)$ http://foodnation.epizy.com/ [R=301,L]
+
 
 
 RewriteRule ^productos/([a-zA-Z]+)$ listProducto.php?tipo=$1 [L]

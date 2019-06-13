@@ -108,7 +108,7 @@ class productoController {
 
         $imgName = str_replace(' ', '', $img['name']);
 
-        $guardar = $this->getEscribir()->añadirNuevoProducto($nombre, $precio, $tipo, "../img/".$imgName);
+        $guardar = $this->getEscribir()->añadirNuevoProducto($nombre, $precio, $tipo, "img/".$imgName);
 
         if($guardar && $img['name'] != 'product01.jpg'){
 
@@ -145,10 +145,14 @@ class productoController {
     }
 
     function actualizarProducto($nombre, $tipo, $precio, $img, $idProducto){
+        if($img['name'] != 'product01.jpg'){
+            $imgName = str_replace(' ', '', $img['name']);
+        $actualizar = $this->getEscribir()->updateProducto($nombre, $precio, $tipo, 'img/'.str_replace('img/', '', $imgName), $idProducto);
+        } else {
+            $actualizar = $this->getEscribir()->updateProducto($nombre, $precio, $tipo, str_replace(' ', '', $img['name']), $idProducto);
+        }
 
-        $actualizar = $this->getEscribir()->updateProducto($nombre, $precio, $tipo, '../img/'.str_replace(' ', '', $img['name']), $idProducto);
-
-        if($actualizar){
+        if($actualizar && $img['name'] != 'product01.jpg'){
 
             $this->guardarImagen($img, "../../img/");
 

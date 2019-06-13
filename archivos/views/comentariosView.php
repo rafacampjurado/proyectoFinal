@@ -172,11 +172,11 @@ class ComentariosView {
 
 
 
-                                <th scope="col"><img class="adminImgListadoProductosComentarios" src="../$imagenProducto"></th>
+                                <th scope="col"><img class="adminImgListadoProductosComentarios" src="./$imagenProducto"></th>
 
 
 
-                                <th scope="col"><a href="../producto/$idProducto">$producto</a></th>
+                                <th scope="col"><a href="./producto/$idProducto">$producto</a></th>
 
 
 

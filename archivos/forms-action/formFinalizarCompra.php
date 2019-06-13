@@ -98,7 +98,7 @@ if (isset($_SESSION['usuario'])) {
 
 
 
-    header('Location: ../panel-usuario/metodos-de-pago');
+    header('Location: /');
 
 
 
