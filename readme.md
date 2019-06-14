@@ -1,6 +1,6 @@
 # Proyecto final
 <img src="img/logo.png" />
-[Enlace al hosting](http://foodnation.epizy.com)
+[Enlace al hosting] (http://foodnation.epizy.com)
 
 # Changelog
 
